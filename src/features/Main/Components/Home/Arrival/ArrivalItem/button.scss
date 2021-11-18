@@ -1,0 +1,98 @@
+@import "../../../../../../App.scss";
+.arrival {
+  &__tool {
+    background-color: $color-dark;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    @media screen and (max-width: 1023px) {
+      height: 15%;
+    }
+    @media screen and (max-width: 767px) {
+      height: 12%;
+    }
+    display: flex;
+    justify-content: space-between;
+    transition: all 1s linear;
+    animation-name: show-tool;
+    animation-duration: 1.5s;
+    @keyframes show-tool {
+      from {
+        bottom: -20px;
+        opacity: 0;
+      }
+      to {
+        bottom: 0;
+        opacity: 1;
+      }
+    }
+    &__find {
+      border: 0;
+      outline: none;
+      color: white;
+      cursor: pointer;
+      background-color: transparent;
+      width: 25%;
+      padding: 15px 20px;
+      transition: all 0.5s linear;
+      &:hover {
+        background-color: $color-red;
+      }
+    }
+    &__addToCart {
+      border: 0;
+      outline: none;
+      color: white;
+      cursor: pointer;
+      background-color: transparent;
+      border-left: 1px solid white;
+      border-right: 1px solid white;
+      width: 50%;
+      transition: all 0.5s linear;
+      position: relative;
+      &:hover {
+        background-color: $color-red;
+      }
+      &__loading {
+        height: 0;
+        width: 0;
+        padding: 6px;
+        border: 3px solid #ccc;
+        border-right-color: $color-gray;
+        border-radius: 22px;
+        animation: rotate 1s infinite linear;
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        @media screen and (max-width: 767px) {
+          left: 10%;
+        }
+        @media screen and (max-width: 1023px) {
+          left: 12%;
+        }
+        transform: translateX(50%) translateY(-50%);
+        @keyframes rotate {
+          100% {
+            -webkit-transform: translateX(50%) translateY(-50%) rotate(360deg);
+          }
+        }
+      }
+    }
+    &__info {
+      border: 0;
+      outline: none;
+      color: white;
+      cursor: pointer;
+      background-color: transparent;
+      width: 25%;
+      padding: 15px 20px;
+      transition: all 0.5s linear;
+      &:hover {
+        background-color: $color-red;
+      }
+    }
+  }
+}
+.screen {
+  display: block;
+}

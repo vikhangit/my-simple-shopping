@@ -1,0 +1,73 @@
+@import "../../../../../App.scss";
+.feature {
+  background-color: white;
+  position: relative;
+  bottom: 0;
+  transform: translateY(-50%);
+  height: 130px;
+  @media screen and (max-width: 1023px) {
+    height: 180px;
+  }
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  box-shadow: 0 5px 20px 0 rgba(23, 44, 82, 0.1);
+  &__list {
+    padding: 40px;
+    @media screen and (max-width: 1023px) {
+      padding: 0;
+      padding-left: 40px;
+    }
+    // @media screen and (max-width: 767px) {
+    //   padding-left: 0;
+    // }
+
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  &__item {
+    display: flex;
+    @media screen and (max-width: 1023px) {
+      width: 50%;
+      margin-top: 30px;
+    }
+    // @media screen and (max-width: 767px) {
+    //   width: 100%;
+    //   margin-top: 30px;
+    // }
+  }
+  &__image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    @media screen and (max-width: 767px) {
+      width: 80px;
+      height: 80px;
+    }
+  }
+  &__info {
+    margin-left: 20px;
+    // @media screen and (max-width: 767px) {
+    //   margin-left: 50px;
+    // }
+
+    &__title {
+      font-weight: 400;
+      color: $color-darker;
+      // @media screen and (max-width: 767px) {
+      //   font-size: 14px;
+      //   font-weight: 500;
+      // }
+    }
+    &__desc {
+      margin-top: 15px;
+      font-size: 14px;
+      // @media screen and (max-width: 767px) {
+      //   font-size: 12px;
+      //   font-weight: 400;
+      // }
+      color: $color-gray;
+    }
+  }
+}

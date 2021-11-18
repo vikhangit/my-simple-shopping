@@ -1,0 +1,74 @@
+@import "../../../../../../App.scss";
+.arrival {
+  &__item {
+    position: relative;
+    margin-top: 60px;
+    cursor: pointer;
+    @media screen and (max-width: 767px) {
+      margin-top: 40px;
+    }
+  }
+  &__top {
+    position: relative;
+  }
+  &__image {
+    object-fit: cover;
+  }
+  &__info {
+    margin-top: 30px;
+  }
+  &__name {
+    font-size: 14px;
+    font-weight: 500;
+    @media screen and (max-width: 767px) {
+      font-size: 16px;
+      font-weight: 600;
+    }
+    color: $color-darker;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.5s linear;
+    &:hover {
+      color: $color-red;
+    }
+  }
+  &__price {
+    margin-top: 20px;
+    font-size: 16px;
+    // @media screen and (max-width: 767px) {
+    //   font-size: 14px;
+    // }
+    font-weight: 600;
+    color: $color-dark-light;
+    display: flex;
+    justify-content: center;
+    cursor: text;
+    align-items: center;
+    text-align: center;
+  }
+  &__old-price {
+    cursor: text;
+    margin-left: 10px;
+    font-size: 12px;
+    text-decoration: line-through;
+  }
+  &__badge {
+    color: white;
+    background-color: $color-green;
+    position: absolute;
+    top: 20px;
+    border-radius: 0 4px 4px 0;
+    padding: 5px 20px;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: "Fira Code", monospace;
+    &--hot {
+      background-color: $color-red;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 16px;
+    }
+  }
+}

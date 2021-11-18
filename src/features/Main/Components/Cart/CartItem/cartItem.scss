@@ -1,0 +1,195 @@
+@import "../../../../../App.scss";
+.cart {
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba($color-dark-light, 0.2);
+    padding: 20px;
+    @media screen and (max-width: 1023px) {
+      align-items: flex-start;
+    }
+    @media screen and (max-width: 767px) {
+      flex-wrap: wrap;
+    }
+
+    &__check {
+      width: 5%;
+      display: flex;
+      input {
+        width: 40%;
+        height: 20px;
+      }
+      @media screen and (max-width: 1023px) {
+        input {
+          width: 50%;
+          height: 30px;
+          margin: 20px auto;
+        }
+      }
+      @media screen and (max-width: 767px) {
+        width: 10%;
+        input {
+          width: 60%;
+          height: 30px;
+          margin: 0;
+        }
+      }
+    }
+    &__image {
+      width: 100px;
+      min-height: 130px;
+      @media screen and (max-width: 1023px) {
+        width: 30%;
+      }
+      @media screen and (max-width: 767px) {
+        width: 90%;
+      }
+
+      img {
+        @media screen and (max-width: 1023px) {
+          width: 60%;
+          margin: auto;
+        }
+        @media screen and (max-width: 1023px) {
+          width: 90%;
+          margin: auto;
+        }
+      }
+    }
+    &__info {
+      width: calc(100% - 200px);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @media screen and (max-width: 1023px) {
+        width: 60%;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      @media screen and (max-width: 767px) {
+        width: 100%;
+        margin-top: 20px;
+      }
+    }
+    &__name {
+      width: calc(100% / 3);
+      text-decoration: none;
+      font-size: 20px;
+      font-weight: 500;
+      color: $color-darker;
+      &:hover {
+        color: $color-red;
+      }
+      @media screen and (max-width: 1023px) {
+        width: 100%;
+      }
+    }
+    &__price {
+      font-size: 16px;
+      font-weight: 400;
+      @media screen and (max-width: 1023px) {
+        margin-top: 20px;
+        font-size: 14px;
+      }
+    }
+    &__quantity {
+      display: flex;
+      align-items: center;
+      background-color: $color-white-dank;
+      @media screen and (max-width: 1023px) {
+        margin-top: 20px;
+      }
+      @media screen and (max-width: 767px) {
+        width: 100%;
+        justify-content: center;
+      }
+      &__increase,
+      &__decrease {
+        border: 0;
+        outline: none;
+        display: block;
+        background-color: transparent;
+        padding: 15px;
+        font-size: 20px;
+        font-weight: 400;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        @media screen and (max-width: 767px) {
+          padding: 10px;
+        }
+
+        &:hover {
+          color: $color-red;
+        }
+      }
+      p {
+        font-size: 16px;
+        font-weight: 400;
+        padding: 0 20px;
+        @media screen and (max-width: 1023px) {
+          padding: 0 30px;
+        }
+        @media screen and (max-width: 767px) {
+          padding: 0 50px;
+        }
+      }
+    }
+    &__total {
+      font-size: 16px;
+      font-weight: 700;
+      @media screen and (max-width: 1023px) {
+        margin-top: 20px;
+        font-size: 14px;
+      }
+    }
+    &__remove {
+      border: 1px solid;
+      outline: none;
+      display: block;
+      font-size: 20px;
+      font-weight: 330;
+      background-color: $color-red;
+      color: $color-light;
+      width: 40px;
+      height: 40px;
+      position: relative;
+      padding: 10px;
+      cursor: pointer;
+      transition: all 0.5s ease;
+      &:hover {
+        background-color: transparent;
+        color: $color-darker;
+      }
+      @media screen and (max-width: 1023px) {
+        margin-top: 20px;
+        font-size: 18px;
+      }
+      @media screen and (max-width: 767px) {
+        width: 100%;
+      }
+
+      &__loading {
+        height: 0;
+        width: 0;
+        padding: 5px;
+        border: 3px solid #ccc;
+        @media screen and (max-width: 1023px) {
+          padding: 8px;
+        }
+        border-right-color: $color-gray;
+        border-radius: 22px;
+        animation: rotateT 1s infinite linear;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        @keyframes rotateT {
+          100% {
+            -webkit-transform: translateX(-50%) translateY(-50%) rotate(360deg);
+          }
+        }
+      }
+    }
+  }
+}

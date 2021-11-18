@@ -1,0 +1,168 @@
+@import "../../../../../App.scss";
+.delete-order {
+  height: 100%;
+  position: fixed;
+  background: rgba($color-white-dank, 0.5);
+  inset: 0;
+  z-index: 99999;
+  &__container {
+    background-color: $color-white;
+    position: absolute;
+    width: 60%;
+    top: 5%;
+    @media screen and (max-width: 1023px) {
+      width: 80%;
+    }
+    @media screen and (max-width: 767px) {
+      width: 90%;
+    }
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__info {
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    overflow-y: auto;
+    &__heading {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba($color-dark-light, 0.2);
+      padding-bottom: 20px;
+      @media screen and (max-width: 767px) {
+        margin-top: 15px;
+        padding-bottom: 15px;
+      }
+      &__title {
+        font-size: 20px;
+        font-weight: 500;
+        @media screen and (max-width: 767px) {
+          font-size: 16px;
+        }
+      }
+      &__btn {
+        border: 0;
+        outline: none;
+        display: block;
+        background-color: transparent;
+        font-size: 20px;
+        @media screen and (max-width: 767px) {
+          font-size: 16px;
+        }
+        cursor: pointer;
+        transition: all 0.5s ease;
+        &:hover {
+          color: $color-red;
+        }
+      }
+    }
+    &__message {
+      text-align: center;
+      margin-top: 30px;
+      font-size: 18px;
+      font-weight: 400;
+      @media screen and (max-width: 767px) {
+        font-size: 14px;
+      }
+    }
+    &__desc {
+      font-size: 14px;
+      font-weight: 300;
+      text-align: center;
+      margin-top: 15px;
+      padding-bottom: 20px;
+      @media screen and (max-width: 767px) {
+        font-size: 12px;
+        line-height: 1.5;
+        margin-bottom: 0;
+      }
+    }
+    &__btn {
+      padding: 20px 0;
+      display: flex;
+      justify-content: flex-end;
+      @media screen and (max-width: 767px) {
+        justify-content: unset;
+        padding: 10px 0 30px;
+      }
+      &__accept,
+      &__cancle {
+        display: block;
+        border: 1px solid;
+        outline: none;
+        cursor: pointer;
+        font-size: 14px;
+        color: $color-white;
+        float: left;
+        padding: 10px 20px;
+        transition: all 0.5s ease;
+        @media screen and (max-width: 767px) {
+          font-size: 12px;
+        }
+      }
+      &__accept {
+        background: linear-gradient(
+          to left,
+          $color-green 50%,
+          $color-light 50%
+        );
+        background-size: 200% 100%;
+        margin-right: 10px;
+        width: 130px;
+        @media screen and (max-width: 767px) {
+          width: 50%;
+        }
+        background-position: right bottom;
+        position: relative;
+        &:hover {
+          background-position: left bottom;
+          color: $color-darker;
+        }
+        &__loading {
+          height: 0;
+          width: 0;
+          padding: 6px;
+          border: 3px solid #ccc;
+          border-right-color: $color-gray;
+          border-radius: 22px;
+          animation: rotateAccept 1s infinite linear;
+          position: absolute;
+          top: 50%;
+          left: 0%;
+          transform: translateX(50%) translateY(-50%);
+          @keyframes rotateAccept {
+            100% {
+              -webkit-transform: translateX(50%) translateY(-50%) rotate(360deg);
+            }
+          }
+        }
+      }
+      &__cancle {
+        background: linear-gradient(to right, $color-red 50%, $color-light 50%);
+        background-size: 200% 100%;
+        background-position: left bottom;
+        width: 130px;
+        @media screen and (max-width: 767px) {
+          width: 50%;
+        }
+        &:hover {
+          background-position: right bottom;
+          color: $color-darker;
+        }
+        &__disable {
+          width: 130px;
+          opacity: 0.2;
+          background-color: $color-dark-light;
+          display: block;
+          border: 1px solid;
+          outline: none;
+          cursor: text;
+          font-size: 14px;
+          color: $color-white;
+        }
+      }
+    }
+  }
+}

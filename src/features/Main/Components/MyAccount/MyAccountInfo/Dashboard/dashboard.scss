@@ -1,0 +1,54 @@
+@import "../../../../../../App.scss";
+.my-account {
+  &__info {
+    &__doashboard {
+      width: 100%;
+      &__header {
+        display: flex;
+        justify-content: space-between;
+        font-size: 18px;
+        font-weight: 500;
+        background-color: rgba($color-dark-light, 0.1);
+        padding: 25px 20px;
+        border-radius: 3px;
+        @media screen and (max-width: 767px) {
+          font-size: 14px;
+          padding: 20px 15px;
+        }
+        span {
+          display: flex;
+          font-weight: 300;
+          @media screen and (max-width: 767px) {
+            font-weight: 400;
+          }
+          h4 {
+            margin-left: 5px;
+          }
+        }
+        &__btn {
+          border: 0;
+          outline: none;
+          background-color: transparent;
+          cursor: pointer;
+          transition: all 0.5s linear;
+          &:hover {
+            color: $color-red;
+          }
+        }
+      }
+      &__desc {
+        margin-top: 25px;
+        font-size: 16px;
+        line-height: 1.8;
+        font-weight: 300;
+        background-color: rgba($color-dark-light, 0.1);
+        padding: 25px 20px;
+        border-radius: 3px;
+        @media screen and (max-width: 767px) {
+          font-size: 14px;
+          padding: 20px 15px;
+        }
+      }
+    }
+  }
+}

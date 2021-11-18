@@ -1,0 +1,26 @@
+@import "../../../../../../App.scss";
+.product-detail {
+  &__extend {
+    display: flex;
+    margin-top: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    @media screen and (max-width: 767px) {
+      font-size: 16px;
+    }
+
+    &__title {
+      margin-right: 30px;
+      color: $color-gray;
+      p:first-child {
+        padding-bottom: 30px;
+      }
+    }
+    &__info {
+      font-weight: 300;
+      p:first-child {
+        padding-bottom: 30px;
+      }
+    }
+  }
+}

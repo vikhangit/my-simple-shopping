@@ -1,0 +1,8 @@
+.my-account {
+  &__info {
+    width: 65%;
+    @media screen and (max-width: 1023px) {
+      width: 100%;
+    }
+  }
+}

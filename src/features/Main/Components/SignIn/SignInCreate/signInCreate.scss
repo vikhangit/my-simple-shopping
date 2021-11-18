@@ -1,0 +1,72 @@
+@import "../../../../../App.scss";
+.sign-in {
+  &__create {
+    width: 50%;
+    margin-left: 30px;
+    @media screen and (max-width: 1023px) {
+      width: 80%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      margin-left: 0;
+    }
+
+    &__title {
+      font-size: 20px;
+      font-weight: 500;
+      color: $color-darker;
+      text-align: center;
+      @media screen and (max-width: 767px) {
+        font-size: 16px;
+        font-weight: 600;
+      }
+    }
+    &__desc {
+      font-size: 16px;
+      font-weight: 300;
+      line-height: 1.8;
+      margin-top: 15px;
+      text-align: center;
+      @media screen and (max-width: 767px) {
+        font-size: 12px;
+      }
+    }
+    &__btn {
+      display: flex;
+      width: fit-content;
+      margin: 25px auto;
+      text-decoration: none;
+      border: 1px solid;
+      border-radius: 3px;
+      padding: 15px 40px;
+      font-size: 16px;
+      font-weight: 400;
+      background-color: $color-red;
+      color: $color-light;
+      text-transform: uppercase;
+      background: linear-gradient(to left, $color-red 50%, $color-light 50%);
+      background-size: 200% 100%;
+      background-position: right bottom;
+      transition: all 0.5s ease;
+      &:hover {
+        background-position: left bottom;
+        color: $color-darker;
+      }
+      @media screen and (max-width: 1023px) {
+        margin-bottom: 60px;
+      }
+
+      @media screen and (max-width: 767px) {
+        width: 100%;
+        padding: 12px 30px;
+        font-size: 14px;
+        margin: 15px 0;
+        margin-bottom: 60px;
+        display: block;
+        text-align: center;
+      }
+    }
+  }
+}

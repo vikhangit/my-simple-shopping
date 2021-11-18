@@ -1,0 +1,24 @@
+.banner {
+  margin-top: 16px;
+  @media screen and (max-width: 767px) {
+    margin-top: 50px;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 40px;
+    @media screen and (max-width: 767px) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  &__item {
+    overflow: hidden;
+  }
+  &__image {
+    transition: all 1s ease 0s;
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+}

@@ -1,0 +1,53 @@
+@import "../../../../../App.scss";
+.news-list {
+  &__item {
+    display: flex;
+    margin-bottom: 40px;
+    justify-content: center;
+    width: 100%;
+    &__image {
+      width: 20%;
+      margin-right: 35px;
+      @media screen and (max-width: 767px) {
+        width: 30%;
+        margin-right: 20px;
+      }
+    }
+    &__info {
+      width: 60%;
+      &__title {
+        font-size: 24px;
+        font-weight: 600;
+        cursor: pointer;
+        text-decoration: none;
+        color: $color-darker;
+        transition: all 0.5s linear;
+        @media screen and (max-width: 767px) {
+          font-size: 16px;
+        }
+        &:hover {
+          color: $color-red;
+        }
+      }
+      &__date-view {
+        margin-top: 20px;
+        display: flex;
+      }
+      &__view,
+      &__date {
+        font-size: 16px;
+        font-weight: 500;
+        @media screen and (max-width: 767px) {
+          font-size: 12px;
+        }
+      }
+      &__view {
+        display: flex;
+        margin-left: 50px;
+        &__icon {
+          margin-right: 10px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,206 @@
+@import "../../App.scss";
+.box-cart {
+  height: 100%;
+  position: fixed;
+  background: rgba($color-white-dank, 0.5);
+  inset: 0;
+  z-index: 99999;
+  &__wrapper {
+    background-color: $color-white;
+    width: 400px;
+    position: absolute;
+    right: 0;
+    animation-duration: 1s;
+    animation-name: Transition;
+    @media screen and (max-width: 767px) {
+      width: 60%;
+    }
+
+    @keyframes Transition {
+      0% {
+        right: -100%;
+        width: 0;
+      }
+      100% {
+        right: 0;
+        width: 400px;
+      }
+    }
+  }
+  &__container {
+    height: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+    overflow-y: auto;
+    @media screen and (max-width: 767px) {
+      width: 90%;
+    }
+  }
+  &__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    @media screen and (max-width: 1023px) {
+      margin-top: 10px;
+      padding-bottom: 0;
+    }
+    border-bottom: 1px solid rgba($color-dark-light, 0.2);
+    &__title {
+      font-size: 16px;
+      font-weight: 500;
+      text-transform: uppercase;
+    }
+    &__btn {
+      border: 0;
+      outline: none;
+      display: block;
+      cursor: pointer;
+      background-color: transparent;
+      font-size: 16px;
+      padding: 16px;
+      transition: all 0.5s ease;
+      &:hover {
+        color: red;
+      }
+    }
+  }
+  &__list {
+    margin-top: 25px;
+    height: 250px;
+    overflow-y: auto;
+    overflow-x: hidden;
+    width: 103.5%;
+    @media screen and (max-width: 767px) {
+      margin-top: 15px;
+    }
+  }
+  &__item {
+    padding-top: 20px;
+    padding-left: 10px;
+    display: flex;
+    align-items: center;
+    @media screen and (max-width: 767px) {
+      padding-top: 10px;
+      padding-left: 5px;
+    }
+    &:not(:last-child) {
+      border-bottom: 1px solid rgba($color-dark-light, 0.2);
+      padding-bottom: 20px;
+      @media screen and (max-width: 767px) {
+        padding-bottom: 10px;
+      }
+    }
+    &__image {
+      width: 75px;
+      height: 100px;
+      position: relative;
+    }
+    &__icon {
+      position: absolute;
+      top: 0;
+      transform: translateY(-5px) translateX(-5px);
+      cursor: pointer;
+      background-color: $color-white;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 5px 20px 0 rgba(23, 44, 82, 0.1);
+      &:hover {
+        background-color: $color-red;
+        color: $color-white;
+      }
+    }
+    &__info {
+      width: calc(100% - 75px);
+      margin-left: 15px;
+    }
+    &__check {
+      display: block;
+      margin-right: 30px;
+    }
+    &__name {
+      text-decoration: none;
+      display: block;
+      font-size: 14px;
+      font-weight: 600;
+      color: $color-dark;
+      line-height: 1.1;
+      transition: all 0.5s ease;
+      &:hover {
+        color: $color-red;
+      }
+    }
+    &__price {
+      margin-top: 20px;
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+  &__total {
+    margin-top: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid rgba($color-dark-light, 0.2);
+    border-bottom: 1px solid rgba($color-dark-light, 0.2);
+    padding: 20px 0;
+    &__title {
+      font-size: 16px;
+      font-weight: 500;
+      color: $color-darker;
+    }
+    &__info {
+      font-size: 16px;
+      font-weight: 500;
+      color: $color-red;
+    }
+  }
+  &__btn {
+    margin: 25px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__view,
+    &__check {
+      display: block;
+      border: 1px solid;
+      outline: none;
+      cursor: pointer;
+      font-size: 14px;
+      color: $color-white;
+      float: left;
+      padding: 15px 20px;
+      transition: all 0.5s ease;
+    }
+    &__view {
+      background: linear-gradient(to left, $color-red 50%, $color-light 50%);
+      background-size: 200% 100%;
+      background-position: right bottom;
+      &:hover {
+        background-position: left bottom;
+        color: $color-darker;
+      }
+    }
+    &__check {
+      background: linear-gradient(
+        to right,
+        $color-darker 50%,
+        $color-light 50%
+      );
+      background-size: 200% 100%;
+      background-position: left bottom;
+      &:hover {
+        background-position: right bottom;
+        color: $color-darker;
+      }
+    }
+  }
+  &__desc {
+    padding-bottom: 100%;
+  }
+}

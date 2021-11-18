@@ -1,0 +1,167 @@
+@import "../../../../../../App.scss";
+.top-product {
+  &__item {
+    position: relative;
+    margin-top: 60px;
+    cursor: pointer;
+    @media screen and (max-width: 767px) {
+      margin-top: 40px;
+    }
+  }
+  &__top {
+    position: relative;
+  }
+  &__image {
+    object-fit: cover;
+  }
+  &__tool {
+    background-color: $color-dark;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    @media screen and (max-width: 1023px) {
+      height: 15%;
+    }
+    @media screen and (max-width: 767px) {
+      height: 12%;
+    }
+    display: flex;
+    justify-content: space-between;
+    transition: all 1s linear;
+    animation-name: show-tool;
+    animation-duration: 1.5s;
+    @keyframes show-tool {
+      from {
+        bottom: -20px;
+        opacity: 0;
+      }
+      to {
+        bottom: 0;
+        opacity: 1;
+      }
+    }
+    &__find {
+      border: 0;
+      outline: none;
+      color: white;
+      cursor: pointer;
+      background-color: transparent;
+      width: 25%;
+      padding: 15px 20px;
+      transition: all 0.5s linear;
+      &:hover {
+        background-color: $color-red;
+      }
+    }
+    &__addToCart {
+      border: 0;
+      outline: none;
+      color: white;
+      cursor: pointer;
+      position: relative;
+      background-color: transparent;
+      border-left: 1px solid white;
+      border-right: 1px solid white;
+      width: 50%;
+      transition: all 0.5s linear;
+      position: relative;
+      &:hover {
+        background-color: $color-red;
+      }
+      &__loading {
+        height: 0;
+        width: 0;
+        padding: 6px;
+        border: 3px solid #ccc;
+        border-right-color: $color-gray;
+        border-radius: 22px;
+        animation: rotateL 1s infinite linear;
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        @media screen and (max-width: 767px) {
+          left: 10%;
+        }
+        @media screen and (max-width: 1023px) {
+          left: 12%;
+        }
+        transform: translateX(50%) translateY(-50%);
+        @keyframes rotateL {
+          100% {
+            -webkit-transform: translateX(50%) translateY(-50%) rotate(360deg);
+          }
+        }
+      }
+    }
+    &__info {
+      border: 0;
+      outline: none;
+      color: white;
+      cursor: pointer;
+      background-color: transparent;
+      width: 25%;
+      padding: 15px 20px;
+      transition: all 0.5s linear;
+      &:hover {
+        background-color: $color-red;
+      }
+    }
+  }
+  &__info {
+    margin-top: 30px;
+  }
+  &__name {
+    font-size: 14px;
+    font-weight: 500;
+    @media screen and (max-width: 767px) {
+      font-size: 16px;
+      font-weight: 600;
+    }
+    color: $color-darker;
+    text-align: center;
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.5s linear;
+    &:hover {
+      color: $color-red;
+    }
+  }
+  &__price {
+    margin-top: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: $color-dark-light;
+    display: flex;
+    justify-content: center;
+    cursor: text;
+    align-items: center;
+    text-align: center;
+  }
+  &__old-price {
+    cursor: text;
+    margin-left: 10px;
+    font-size: 12px;
+    text-decoration: line-through;
+  }
+  &__badge {
+    color: white;
+    background-color: $color-green;
+    position: absolute;
+    top: 20px;
+    border-radius: 0 4px 4px 0;
+    padding: 5px 20px;
+    font-size: 12px;
+    font-weight: 400;
+    font-family: "Fira Code", monospace;
+    &--hot {
+      background-color: $color-red;
+    }
+  }
+  &__banner {
+    margin-top: 100px;
+    @media screen and (max-width: 767px) {
+      margin-top: 50px;
+    }
+  }
+}

@@ -1,0 +1,148 @@
+@import "../../../../../App.scss";
+.sign-in {
+  &__form {
+    width: 50%;
+    margin-right: 30px;
+    @media screen and (max-width: 1023px) {
+      width: 80%;
+      margin-right: auto;
+      margin-left: auto;
+    }
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      margin-right: 0;
+    }
+
+    &__field {
+      width: 100%;
+    }
+    &__input {
+      box-sizing: border-box;
+      width: 100%;
+      display: block;
+      border: 0;
+      outline: none;
+      background-color: rgba($color-dark-light, 0.1);
+      padding: 18px 20px;
+      margin-bottom: 30px;
+      font-size: 14px;
+      font-weight: 400;
+      @media screen and (max-width: 767px) {
+        padding: 16px 18px;
+        font-size: 12px;
+        margin-bottom: 20px;
+      }
+
+      &::-webkit-input-placeholder {
+        font-size: 14px;
+        font-weight: 400;
+        color: $color-gray;
+        @media screen and (max-width: 767px) {
+          font-size: 12px;
+        }
+      }
+      &::-moz-input-placeholder {
+        font-size: 14px;
+        font-weight: 400;
+        color: $color-gray;
+        @media screen and (max-width: 767px) {
+          font-size: 12px;
+        }
+      }
+    }
+    &__error {
+      display: flex;
+      margin-left: 10px;
+      @media screen and (max-width: 767px) {
+        margin-left: 5px;
+      }
+    }
+    &__icon {
+      color: $color-red;
+    }
+    &__message {
+      margin-left: 7px;
+      margin-bottom: 30px;
+      color: $color-red;
+      font-size: 14px;
+      font-weight: 400;
+      @media screen and (max-width: 767px) {
+        margin-bottom: 20px;
+      }
+    }
+    &__btn {
+      margin-bottom: 30px;
+      cursor: pointer;
+      border: 1px solid;
+      width: 150px;
+      outline: none;
+      padding: 15px 40px;
+      font-size: 16px;
+      font-weight: 400;
+      position: relative;
+      background-color: $color-red;
+      color: $color-light;
+      text-transform: uppercase;
+      background: linear-gradient(to left, $color-red 50%, $color-light 50%);
+      background-size: 200% 100%;
+      background-position: right bottom;
+      transition: all 0.5s ease;
+      @media screen and (max-width: 767px) {
+        width: 100%;
+        padding: 12px 30px;
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
+      &:hover {
+        background-position: left bottom;
+        color: $color-darker;
+      }
+      &__loading {
+        height: 0;
+        width: 0;
+        padding: 6px;
+        border: 3px solid #ccc;
+        border-right-color: $color-gray;
+        border-radius: 22px;
+        animation: rotateSignIn 1s infinite linear;
+        position: absolute;
+        top: 50%;
+        left: 0%;
+        transform: translateX(50%) translateY(-50%);
+        @media screen and (max-width: 767px) {
+          left: 25%;
+          padding: 8px;
+        }
+
+        @keyframes rotateSignIn {
+          100% {
+            -webkit-transform: translateX(50%) translateY(-50%) rotate(360deg);
+          }
+        }
+      }
+    }
+    &__bottom {
+      margin-bottom: 90px;
+      @media screen and (max-width: 767px) {
+        margin-bottom: 30px;
+      }
+    }
+    &__forgot {
+      color: $color-darker;
+      font-size: 14px;
+      font-weight: 400;
+      @media screen and (max-width: 767px) {
+        font-size: 12px;
+      }
+      text-decoration: none;
+      transition: all 0.5s ease;
+      &:hover {
+        color: $color-red;
+      }
+      @media screen and (max-width: 767px) {
+        text-decoration: underline;
+        color: $color-purple;
+      }
+    }
+  }
+}

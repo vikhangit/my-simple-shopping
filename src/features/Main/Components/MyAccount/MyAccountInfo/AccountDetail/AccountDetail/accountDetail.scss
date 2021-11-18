@@ -1,0 +1,124 @@
+@import "../../../../../../../App.scss";
+.my-account {
+  &__info {
+    &__detail {
+      width: 100%;
+      &__header {
+        padding-bottom: 20px;
+        font-weight: 500;
+      }
+      &__content {
+        width: 90%;
+        @media screen and (max-width: 767px) {
+          width: 100%;
+        }
+        &__info {
+          display: flex;
+          justify-content: space-between;
+          align-items: flex-start;
+          margin-top: 30px;
+          @media screen and (max-width: 767px) {
+            flex-wrap: wrap;
+            margin-top: 20px;
+          }
+        }
+        &__title {
+          width: 20%;
+          font-weight: 600;
+          @media screen and (max-width: 767px) {
+            width: 30%;
+          }
+        }
+        &__detail {
+          width: 60%;
+          position: relative;
+          font-weight: 300;
+          @media screen and (max-width: 767px) {
+            width: 50%;
+            // overflow: hidden;
+          }
+          &__field {
+            &:not(:first-child) {
+              margin-top: 15px;
+            }
+          }
+          &__input {
+            width: 95%;
+            border: 0;
+            outline: none;
+            line-height: 1.4;
+            font-size: 14px;
+            background-color: rgba($color-dark-light, 0.05);
+            padding: 10px;
+            border-radius: 3px;
+          }
+          &__error {
+            display: flex;
+            margin-left: 10px;
+            margin-top: 10px;
+            &__icon {
+              color: $color-red;
+            }
+            &__message {
+              margin-left: 7px;
+              color: $color-red;
+              font-size: 14px;
+              font-weight: 400;
+            }
+          }
+          &__tool {
+            width: 95%;
+            display: flex;
+            justify-content: flex-end;
+          }
+          &__btn {
+            margin-top: 10px;
+            cursor: pointer;
+            border: 1px solid;
+            outline: none;
+            color: $color-light;
+            background-color: $color-purple;
+            padding: 10px 20px;
+            &:hover {
+              color: $color-purple;
+              background-color: transparent;
+            }
+          }
+        }
+        &__edit {
+          width: 10%;
+          text-align: left;
+        }
+        &__btn {
+          border: 0;
+          outline: none;
+          background-color: transparent;
+          font-size: 14px;
+          font-weight: 400;
+          cursor: pointer;
+          color: $color-purple;
+          text-transform: capitalize;
+          transition: all 0.5s linear;
+          &:hover {
+            color: $color-red;
+          }
+        }
+      }
+    }
+  }
+}
+.email {
+  @media screen and (max-width: 767px) {
+    width: 80%;
+    margin-top: 15px;
+    &__btn {
+      margin-top: 15px;
+    }
+  }
+}
+.form {
+  @media screen and (max-width: 767px) {
+    width: 85%;
+    margin-top: 15px;
+  }
+}

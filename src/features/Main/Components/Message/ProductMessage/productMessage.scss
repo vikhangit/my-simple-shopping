@@ -1,0 +1,194 @@
+@import "../../../../../App.scss";
+.product-message {
+  height: 100%;
+  position: fixed;
+  background: rgba($color-white-dank, 0.5);
+  inset: 0;
+  z-index: 99999;
+  &__container {
+    background-color: $color-white;
+    position: absolute;
+    width: 60%;
+    top: 5%;
+    @media screen and (max-width: 1023px) {
+      width: 80%;
+    }
+    @media screen and (max-width: 767px) {
+      width: 90%;
+    }
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__info {
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    overflow-y: auto;
+    &__heading {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba($color-dark-light, 0.2);
+      padding-bottom: 20px;
+      @media screen and (max-width: 767px) {
+        margin-top: 15px;
+        padding-bottom: 15px;
+      }
+      &__title {
+        font-size: 20px;
+        font-weight: 500;
+        @media screen and (max-width: 767px) {
+          font-size: 16px;
+        }
+      }
+      &__btn {
+        border: 0;
+        outline: none;
+        display: block;
+        background-color: transparent;
+        font-size: 20px;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        @media screen and (max-width: 767px) {
+          font-size: 16px;
+        }
+        &:hover {
+          color: $color-red;
+        }
+      }
+    }
+    &__check {
+      margin: 20px auto;
+      text-align: center;
+      @media screen and (max-width: 767px) {
+        margin: 15px auto;
+      }
+    }
+    &__icon {
+      color: $color-green;
+    }
+    &__message {
+      text-align: center;
+      font-size: 18px;
+      font-weight: 500;
+      @media screen and (max-width: 767px) {
+        font-size: 14px;
+      }
+    }
+    &__product {
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid rgba($color-dark-light, 0.2);
+      border-bottom: 1px solid rgba($color-dark-light, 0.2);
+      padding: 20px 5px;
+      @media screen and (max-width: 767px) {
+        flex-wrap: wrap;
+      }
+      &__image {
+        width: 30%;
+        @media screen and (max-width: 767px) {
+          width: 100%;
+        }
+        img {
+          width: 80%;
+          object-fit: cover;
+          @media screen and (max-width: 767px) {
+            width: 80%;
+            height: auto;
+            margin: 0 auto 15px;
+          }
+        }
+      }
+      &__detail {
+        width: 70%;
+        @media screen and (max-width: 767px) {
+          width: 100%;
+        }
+      }
+      &__name {
+        font-size: 18px;
+        font-weight: 500;
+        text-decoration: none;
+        color: $color-darker;
+        transition: all 0.5 ease;
+        &:hover {
+          color: $color-red;
+        }
+        width: 100%;
+      }
+      &__price {
+        font-size: 16px;
+        font-weight: 300;
+        width: 100%;
+        margin: 15px 0;
+      }
+      &__desc {
+        width: 90%;
+        @media screen and (max-width: 767px) {
+          width: 100%;
+          -webkit-line-clamp: 3;
+        }
+        font-size: 14px;
+        font-weight: 300;
+        line-height: 1.8;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-word;
+      }
+    }
+    &__btn {
+      padding: 20px 0;
+      display: flex;
+      justify-content: flex-end;
+      @media screen and (max-width: 767px) {
+        justify-content: unset;
+      }
+      &__view,
+      &__cancle {
+        border-radius: 3px;
+        display: block;
+        border: 1px solid;
+        outline: none;
+        cursor: pointer;
+        font-size: 14px;
+        color: $color-white;
+        float: left;
+        text-align: center;
+        padding: 10px 20px;
+        transition: all 0.5s ease;
+        @media screen and (max-width: 767px) {
+          width: 50%;
+          font-size: 12px;
+        }
+      }
+      &__view {
+        text-decoration: none;
+        background: linear-gradient(
+          to left,
+          $color-green 50%,
+          $color-light 50%
+        );
+        background-size: 200% 100%;
+        background-position: right bottom;
+        &:hover {
+          background-position: left bottom;
+          color: $color-darker;
+        }
+        margin-right: 10px;
+      }
+      &__cancle {
+        background: linear-gradient(to right, $color-red 50%, $color-light 50%);
+        background-size: 200% 100%;
+        background-position: left bottom;
+        &:hover {
+          background-position: right bottom;
+          color: $color-darker;
+        }
+      }
+    }
+  }
+}

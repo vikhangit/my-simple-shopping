@@ -1,0 +1,103 @@
+@import "../../../../../../App.scss";
+.latest-news {
+  margin-bottom: 100px;
+  &__list {
+    margin-top: 60px;
+    display: grid;
+    grid-gap: 0 40px;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    @media screen and (max-width: 1023px) {
+      grid-gap: 0 30px;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 767px) {
+      grid-gap: 0;
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  &__control {
+    &__left {
+      position: absolute;
+      left: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 15px;
+      @media screen and (max-width: 767px) {
+        padding: 25px;
+      }
+      @media screen and (max-width: 1023px) {
+        padding: 18px;
+      }
+      font-size: 16px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      outline: none;
+      border: 1px solid rgba($color-gray, 0.4);
+      color: $color-gray;
+      cursor: pointer;
+      transition: all 0.3s linear;
+      animation-duration: 0.5s;
+      animation-name: toRightLN;
+      // animation-iteration-count: infinite;
+      &:hover {
+        color: $color-light;
+        background-color: $color-red;
+        border: 0;
+      }
+      @keyframes toRightLN {
+        from {
+          left: 15px;
+          opacity: 0;
+        }
+        to {
+          left: 5px;
+          opacity: 1;
+        }
+      }
+    }
+    &__right {
+      position: absolute;
+      right: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 15px;
+      font-size: 16px;
+      @media screen and (max-width: 767px) {
+        padding: 25px;
+      }
+      @media screen and (max-width: 1023px) {
+        padding: 18px;
+      }
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      outline: none;
+      border: 1px solid rgba($color-gray, 0.4);
+      color: $color-gray;
+      cursor: pointer;
+      transition: all 0.3s linear;
+      animation-duration: 0.5s;
+      animation-name: toLeftLN;
+      //animation-iteration-count: infinite;
+      &:hover {
+        color: white;
+        background-color: $color-red;
+        border: 0;
+      }
+      @keyframes toLeftLN {
+        from {
+          right: 15px;
+          opacity: 0;
+        }
+        to {
+          right: 5px;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

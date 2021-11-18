@@ -1,0 +1,119 @@
+@import "../../../../../../App.scss";
+.order-detail {
+  height: 100%;
+  position: fixed;
+  background: rgba($color-white-dank, 0.5);
+  inset: 0;
+  z-index: 99999;
+  &__container {
+    background-color: $color-white;
+    position: absolute;
+    width: 75%;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  &__info {
+    height: 100%;
+    width: 90%;
+    margin: 0 auto;
+    &__heading {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba($color-dark-light, 0.2);
+      padding-bottom: 20px;
+      &__title {
+        font-size: 20px;
+        font-weight: 500;
+      }
+      &__btn {
+        border: 0;
+        outline: none;
+        display: block;
+        background-color: transparent;
+        font-size: 20px;
+        cursor: pointer;
+        transition: all 0.5s ease;
+        &:hover {
+          color: $color-red;
+        }
+      }
+    }
+    &__content {
+      border-bottom: 1px solid rgba($color-dark-light, 0.2);
+      &__product {
+        max-height: 250px;
+        overflow-y: scroll;
+      }
+      &__detail {
+        display: flex;
+        justify-content: space-between;
+        &:not(:last-child) {
+          border-bottom: 1px solid rgba($color-dark-light, 0.2);
+        }
+        padding: 20px 10px;
+        &__image {
+          width: 80px;
+        }
+        &__name,
+        &__price,
+        &__total,
+        &__action {
+          text-decoration: none;
+          color: $color-dark-light;
+          transition: all 0.5s linear;
+          display: flex;
+          text-align: center;
+          justify-content: center;
+          align-items: center;
+          font-size: 14px;
+        }
+        &__name:hover {
+          color: $color-red;
+        }
+        &__desc {
+          width: 40%;
+          font-size: 14px;
+          line-height: 1.8;
+          display: -webkit-box;
+          -webkit-line-clamp: 4;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          word-break: break-word;
+        }
+        &__action {
+          &__btn {
+            border: 1px solid;
+            text-decoration: none;
+            color: $color-light;
+            background-color: $color-purple;
+            padding: 10px 15px;
+            border-radius: 3px;
+            transition: all 0.5s linear;
+            &:hover {
+              background-color: transparent;
+              color: $color-darker;
+            }
+          }
+        }
+      }
+    }
+    &__bonus {
+      display: flex;
+      justify-content: flex-end;
+      margin-bottom: 20px;
+      &__title,
+      &__detail {
+        &__total,
+        &__ship {
+          font-size: 16px;
+          margin-top: 20px;
+          margin-right: 30px;
+        }
+      }
+    }
+  }
+}

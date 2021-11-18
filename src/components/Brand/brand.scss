@@ -1,0 +1,17 @@
+@import "../../App.scss";
+.brand {
+  background-color: $color-light;
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 0;
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+  &__item {
+    img {
+      transition: all 0.3s linear;
+    }
+  }
+}

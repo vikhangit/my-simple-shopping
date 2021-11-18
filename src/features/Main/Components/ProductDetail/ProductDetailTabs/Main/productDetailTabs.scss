@@ -1,0 +1,10 @@
+@import "../../../../../../App.scss";
+.product-detail {
+  &__tabs {
+    margin-top: 100px;
+    &__content {
+      margin-top: 30px;
+      margin-bottom: 100px;
+    }
+  }
+}

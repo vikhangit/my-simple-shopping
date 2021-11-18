@@ -1,0 +1,11 @@
+.my-account {
+  &__content {
+    width: 100%;
+    display: flex;
+    margin-bottom: 100px;
+    @media screen and (max-width: 1023px) {
+      flex-wrap: wrap;
+      margin-bottom: 70px;
+    }
+  }
+}

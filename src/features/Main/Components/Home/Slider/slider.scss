@@ -1,0 +1,227 @@
+@import "../../../../../App.scss";
+.slider {
+  margin-top: 30px;
+  position: relative;
+  &__image {
+    img {
+      height: 700px;
+      @media screen and (max-width: 1023px) {
+        height: 500px;
+      }
+      @media screen and (max-width: 767px) {
+        height: 350px;
+      }
+
+      object-fit: cover;
+      object-position: center;
+      position: relative;
+    }
+  }
+  &__info {
+    display: block;
+    width: 40%;
+    @media screen and (max-width: 1023px) {
+      width: 60%;
+      top: 45%;
+    }
+    @media screen and (max-width: 767px) {
+      width: 90%;
+      transform: translateX(10%);
+      top: 50px;
+    }
+
+    position: absolute;
+    top: 50%;
+    transform: translateX(20%) translateY(-50%);
+    left: 0;
+    animation-duration: 1s;
+    animation-name: MoveInfo;
+    @keyframes MoveInfo {
+      from {
+        top: 100%;
+      }
+      to {
+        top: 50%;
+        @media screen and (max-width: 1023px) {
+          top: 45%;
+        }
+        @media screen and (max-width: 767px) {
+          top: 50px;
+        }
+      }
+    }
+  }
+  &__title {
+    font-size: 72px;
+    @media screen and (max-width: 1023px) {
+      font-size: 40px;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 30px;
+    }
+
+    font-weight: 700;
+    color: $color-dark;
+    animation-name: opacityText;
+    animation-duration: 1s;
+  }
+  &__sub-title {
+    margin-top: 15px;
+    font-size: 25px;
+    @media screen and (max-width: 1023px) {
+      font-size: 18px;
+    }
+    @media screen and (max-width: 1023px) {
+      font-size: 16px;
+    }
+    font-weight: 400;
+    color: $color-dark-light;
+    animation-name: opacityText;
+    animation-duration: 3s;
+  }
+  &__line {
+    width: 100px;
+    height: 2px;
+    background-color: $color-red;
+    margin: 25px 0;
+    animation-name: opacityText;
+    animation-duration: 3s;
+  }
+  &__desc {
+    font-size: 16px;
+    @media screen and (max-width: 1023px) {
+      font-size: 14px;
+    }
+    @media screen and (max-width: 767px) {
+      font-size: 12px;
+      width: 100%;
+    }
+
+    font-weight: 300;
+    font-weight: #000000;
+    line-height: 1.8;
+    width: 90%;
+    margin-bottom: 25px;
+    animation-name: opacityText;
+    animation-duration: 5s;
+  }
+  &__link {
+    text-decoration: none;
+    background-color: $color-red;
+    // height: 50px;
+    color: white;
+    padding: 15px 40px;
+    border-radius: 40px;
+    @media screen and (max-width: 1023px) {
+      padding: 10px 30px;
+      font-size: 14px;
+    }
+    @media screen and (max-width: 767px) {
+      padding: 15px;
+      font-size: 14px;
+      display: block;
+      text-align: center;
+      width: 90%;
+    }
+    transition: all 0.3s linear;
+    animation-name: opacityText;
+    animation-duration: 7s;
+    &:hover {
+      background-color: $color-dark;
+      color: white;
+    }
+  }
+  @keyframes opacityText {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  &__tool {
+    &__left {
+      position: absolute;
+      left: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 20px;
+      @media screen and (max-width: 1023px) {
+        padding: 15px;
+      }
+      @media screen and (max-width: 767px) {
+        top: 100%;
+        transform: translateY(-100%);
+      }
+
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      outline: none;
+      border: 1px solid rgba($color-gray, 0.4);
+      color: $color-gray;
+      cursor: pointer;
+      transition: all 0.3s linear;
+      animation-duration: 0.5s;
+      animation-name: toRight;
+      // animation-iteration-count: infinite;
+      &:hover {
+        color: white;
+        background-color: $color-red;
+        border: 0;
+      }
+      @keyframes toRight {
+        from {
+          left: 50px;
+          opacity: 0;
+        }
+        to {
+          left: 20px;
+          opacity: 1;
+        }
+      }
+    }
+    &__right {
+      position: absolute;
+      right: 20px;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 20px;
+      @media screen and (max-width: 1023px) {
+        padding: 15px;
+      }
+      @media screen and (max-width: 767px) {
+        top: 100%;
+        transform: translateY(-100%);
+      }
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      outline: none;
+      border: 1px solid rgba($color-gray, 0.4);
+      color: $color-gray;
+      cursor: pointer;
+      transition: all 0.3s linear;
+      animation-duration: 0.5s;
+      animation-name: toLeft;
+      //animation-iteration-count: infinite;
+      &:hover {
+        color: white;
+        background-color: $color-red;
+        border: 0;
+      }
+      @keyframes toLeft {
+        from {
+          right: 50px;
+          opacity: 0;
+        }
+        to {
+          right: 20px;
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,12 @@
+.sign-in {
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    @media screen and (max-width: 1023px) {
+      flex-wrap: wrap;
+    }
+    @media screen and (max-width: 767px) {
+      flex-wrap: wrap;
+    }
+  }
+}

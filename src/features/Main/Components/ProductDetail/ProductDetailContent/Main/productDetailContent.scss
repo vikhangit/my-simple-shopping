@@ -1,0 +1,81 @@
+@import "../../../../../../App.scss";
+.product-detail {
+  &__content {
+    display: flex;
+    @media screen and (max-width: 767px) {
+      flex-wrap: wrap;
+    }
+  }
+  &__image {
+    width: 30%;
+    display: flex;
+    margin-bottom: auto;
+    @media screen and (max-width: 767px) {
+      margin: 0 auto;
+      width: 100%;
+    }
+    img {
+      margin: 0 auto;
+      width: 100%;
+      object-fit: cover;
+      @media screen and (max-width: 767px) {
+        width: 60%;
+      }
+    }
+  }
+  &__info {
+    width: 70%;
+    margin-left: 50px;
+    @media screen and (max-width: 767px) {
+      width: 100%;
+      margin-left: 0;
+      margin-top: 30px;
+    }
+    display: flex;
+    flex-direction: column;
+    margin-bottom: auto;
+  }
+  &__name {
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 25px;
+  }
+  &__price {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 30px;
+    line-height: 0;
+    color: $color-red;
+    margin-right: 30px;
+  }
+  &__new-price {
+    font-size: 26px;
+    font-weight: 500;
+  }
+  &__old-price {
+    font-size: 20px;
+    font-weight: 500;
+    text-decoration: line-through;
+    color: rgba($color-red, 0.6);
+    margin-left: 15px;
+  }
+  &__desc {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.8;
+    &__btn {
+      color: $color-purple;
+      cursor: pointer;
+      margin-left: 10px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+.star {
+  @media screen and (max-width: 1023px) {
+    width: 20px !important;
+    height: 20px !important;
+  }
+}

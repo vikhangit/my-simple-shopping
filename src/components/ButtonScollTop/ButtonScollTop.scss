@@ -1,0 +1,24 @@
+@import "../../App.scss";
+.btn-scoll{
+        position: fixed;
+        z-index: 9999999;
+        bottom: 70px;
+        right: 3%;
+        font-size: 20px;
+        outline: none;
+        border: 0;
+        padding: 11px;
+        transform: rotate(45deg);
+        box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        &:hover{
+                color: $color-light;
+                background-color: $color-red;
+        }
+        &__text{
+                transform: rotate(-45deg);
+        }
+}

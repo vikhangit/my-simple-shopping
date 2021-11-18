@@ -1,0 +1,128 @@
+@import "../../../../App.scss";
+.header {
+  &__right {
+    width: 27%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &__user {
+      position: relative;
+      cursor: pointer;
+      font-size: 20px;
+      margin-right: 20px;
+    }
+  }
+  &__cart {
+    &__mobile {
+      display: none;
+      @media screen and (max-width: 767px) {
+        display: flex;
+      }
+    }
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: inherit;
+    transition: all 0.5s ease 0s;
+    &:hover {
+      color: $color-red;
+    }
+    &__icon {
+      position: relative;
+      font-size: 20px;
+      cursor: pointer;
+      margin-right: 20px;
+      &__quantity {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateX(70%) translateY(-40%);
+        font-size: 12px;
+        font-weight: 600;
+        background-color: $color-red;
+        color: white;
+        width: 20px;
+        height: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+      }
+    }
+    &__info {
+      cursor: pointer;
+      @media screen and (max-width: 767px) {
+        display: none;
+      }
+      &__name {
+        text-transform: uppercase;
+        font-weight: 500;
+        opacity: 0.6;
+        font-size: 13px;
+        margin-bottom: 10px;
+      }
+      &__price {
+        color: $color-red;
+      }
+    }
+  }
+  &__box {
+    position: absolute;
+    z-index: 999999;
+    background-color: white;
+    box-shadow: 0 5px 20px 0 rgba(23, 44, 82, 0.1);
+    right: 0;
+    top: 90%;
+    border-radius: 3px;
+    // transform: translateX(-0%);
+    width: 150px;
+    max-width: 400px;
+    animation-name: show;
+    animation-duration: 0.5s;
+    &__item {
+      margin: 20px;
+    }
+    &__link {
+      text-decoration: none;
+      color: inherit;
+      width: 100%;
+      border: 0;
+      outline: none;
+      text-align: left;
+      cursor: pointer;
+      background-color: transparent;
+      display: block;
+      font-size: 12px;
+      transition: all 0.5s ease;
+      &:hover {
+        margin: 5px;
+        color: $color-red;
+      }
+      &--header {
+        font-weight: 600;
+        &:hover {
+          margin: 0;
+        }
+      }
+      &__line {
+        margin-top: 5px;
+        width: 100%;
+        height: 1px;
+        background-color: rgba($color-darker, 0.2);
+      }
+    }
+    @keyframes show {
+      from {
+        opacity: 0;
+        right: 10px;
+      }
+      to {
+        opacity: 1;
+        right: 0;
+      }
+    }
+  }
+}

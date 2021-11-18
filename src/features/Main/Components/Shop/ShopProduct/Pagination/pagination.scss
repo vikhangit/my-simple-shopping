@@ -1,0 +1,68 @@
+@import "../../../../../../App.scss";
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  margin-bottom: 100px;
+  &__btn {
+    &__prev,
+    &__dots {
+      margin-right: 15px;
+    }
+    &__prev,
+    &__next,
+    &__dots {
+      color: $color-dark-light;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 0;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      cursor: pointer;
+      transition: all 0.5s linear;
+      &:hover {
+        background-color: $color-red;
+        color: $color-light;
+      }
+    }
+  }
+  &__item {
+    margin-right: 15px;
+    &__btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 0;
+      border-radius: 50%;
+      font-size: 14px;
+      font-weight: 600;
+      color: $color-dark-light;
+      width: 45px;
+      height: 45px;
+      cursor: pointer;
+      transition: all 0.5s linear;
+      &:hover {
+        background-color: $color-red;
+        color: $color-light;
+      }
+    }
+    &__active {
+      background-color: $color-red;
+      color: $color-light;
+    }
+  }
+  &__disabled {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    background-color: rgba($color-dark-light, 0.5);
+    color: $color-darker;
+    cursor: text;
+  }
+}

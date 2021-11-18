@@ -1,0 +1,44 @@
+@import "../../../../../../../App.scss";
+.product-detail {
+  &__tabs {
+    &__content {
+      &__review {
+        &__title {
+          font-size: 18px;
+          font-weight: 500;
+          color: $color-darker;
+          border-bottom: 1px solid rgba($color-dark-light, 0.2);
+          max-width: 300px;
+          padding-bottom: 15px;
+          text-align: center;
+          margin: 0 auto;
+        }
+        &__rating {
+          display: flex;
+          justify-content: center;
+          margin-top: 40px;
+          font-size: 12px;
+          align-items: center;
+          @media screen and (max-width: 1023px) {
+            font-size: 20px;
+          }
+        }
+        &__star {
+          padding-right: 5px;
+        }
+        &__more {
+          display: flex;
+          margin-top: 85px;
+          @media screen and (max-width: 1023px) {
+            margin-top: 45px;
+            flex-wrap: wrap-reverse;
+          }
+        }
+      }
+    }
+  }
+}
+.star {
+  width: 20px !important;
+  height: 20px !important;
+}

@@ -1,0 +1,28 @@
+@import "../../../App.scss";
+.header {
+  margin: 40px 0;
+  font: size 12px;
+  position: relative;
+  &__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+  }
+  &__toggle {
+    display: none;
+    cursor: pointer;
+    &:hover {
+      color: $color-red;
+    }
+    @media screen and (max-width: 1023px) {
+      display: block;
+    }
+  }
+  &__logo {
+    width: 21%;
+    // @media screen and (max-width: 1023px) {
+    //   width: auto;
+    // }
+  }
+}

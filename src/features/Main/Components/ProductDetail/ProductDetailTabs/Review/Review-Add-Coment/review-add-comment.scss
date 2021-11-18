@@ -1,0 +1,148 @@
+@import "../../../../../../../App.scss";
+.product-detail {
+  &__tabs {
+    &__content {
+      &__review {
+        &__add {
+          width: 40%;
+          @media screen and (max-width: 1023px) {
+            margin: 0 auto;
+            width: 90%;
+          }
+          &__heading {
+            padding-bottom: 15px;
+            font-size: 18px;
+            font-weight: 500;
+            color: $color-darker;
+            border-bottom: 1px solid rgba($color-dark-light, 0.2);
+            max-width: 300px;
+          }
+          &__rating {
+            margin: 35px 0 25px;
+            display: flex;
+            cursor: pointer;
+            p {
+              margin-right: 10px;
+              font-size: 16px;
+              font-weight: 500;
+              color: $color-darker;
+            }
+          }
+          &__star {
+            margin-left: 5px;
+            font-size: 12px;
+          }
+          &__field {
+            position: relative;
+          }
+          &__icon {
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translateY(50%) translateX(-100%);
+            color: $color-red;
+          }
+          &__textarea {
+            display: block;
+            width: 100%;
+            border: 0;
+            outline: none;
+            background-color: $color-blue-white;
+            padding: 15px 50px 15px 20px;
+            font-size: 14px;
+            font-weight: 400;
+            &::-webkit-input-placeholder {
+              font-size: 14px;
+              font-weight: 400;
+              color: $color-darker;
+              font-family: "Montserrat", sans-serif;
+            }
+            &::-moz-input-placeholder {
+              font-size: 16px;
+              font-weight: 400;
+              color: $color-darker;
+              font-family: "Montserrat", sans-serif;
+            }
+          }
+          &__textarea {
+            margin: 0 0 30px;
+            height: 200px;
+            @media screen and (max-width: 767px) {
+              height: 150px;
+            }
+          }
+          &__error {
+            display: flex;
+            margin-left: 10px;
+            &__icon {
+              color: $color-red;
+            }
+            &__message {
+              margin-left: 7px;
+              margin-bottom: 25px;
+              color: $color-red;
+              font-size: 14px;
+              font-weight: 400;
+              @media screen and (max-width: 1023px) {
+                font-weight: 500;
+              }
+            }
+          }
+          &__submit {
+            display: flex;
+          }
+          &__btn {
+            display: block;
+            margin-left: auto;
+            border: 0;
+            outline: none;
+            font-size: 16px;
+            font-weight: 500;
+            color: $color-light;
+            text-transform: uppercase;
+            padding: 15px 0;
+            cursor: pointer;
+            border: 1px solid;
+            position: relative;
+            width: 160px;
+            @media screen and (max-width: 767px) {
+              width: 100%;
+            }
+
+            background: linear-gradient(
+              to left,
+              $color-red 50%,
+              $color-light 50%
+            );
+            background-size: 200% 100%;
+            background-position: right bottom;
+            transition: all 0.5s ease;
+            &:hover {
+              background-position: left bottom;
+              color: $color-darker;
+            }
+            &__loading {
+              height: 0;
+              width: 0;
+              padding: 6px;
+              border: 3px solid #ccc;
+              border-right-color: $color-gray;
+              border-radius: 22px;
+              animation: rotate 1s infinite linear;
+              position: absolute;
+              top: 50%;
+              left: 0%;
+              transform: translateX(50%) translateY(-50%);
+              @keyframes rotateComment {
+                100% {
+                  -webkit-transform: translateX(50%) translateY(-50%)
+                    rotateComment(360deg);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

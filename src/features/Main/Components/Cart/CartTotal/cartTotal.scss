@@ -1,0 +1,117 @@
+@import "../../../../../App.scss";
+.cart {
+  &__total {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-top: 70px;
+    margin-bottom: 100px;
+    @media screen and (max-width: 767px) {
+      flex-direction: row;
+      align-items: stretch;
+      margin-bottom: 60px;
+    }
+
+    &__content {
+      width: 450px;
+    }
+    &__heading {
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 15px;
+      @media screen and (max-width: 767px) {
+        font-size: 16px;
+      }
+    }
+    &__info {
+      display: flex;
+      background: $color-blue-white;
+      justify-content: space-between;
+      &__title {
+        width: 70%;
+        @media screen and (max-width: 767px) {
+          width: 80%;
+        }
+        h4 {
+          font-size: 16px;
+          font-weight: 400;
+          padding: 15px 10px;
+          @media screen and (max-width: 767px) {
+            font-size: 14px;
+          }
+
+          &:last-child {
+            font-weight: 700;
+          }
+          &:not(:last-child) {
+            border-bottom: 1px solid rgba($color-dark-light, 0.2);
+          }
+        }
+      }
+      &__price {
+        width: 30%;
+        @media screen and (max-width: 767px) {
+          width: 20%;
+        }
+
+        p {
+          font-size: 16px;
+          font-weight: 400;
+          padding: 15px 10px;
+          &:last-child {
+            font-weight: 700;
+          }
+          &:not(:last-child) {
+            border-bottom: 1px solid rgba($color-dark-light, 0.2);
+          }
+          @media screen and (max-width: 767px) {
+            font-size: 14px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+    &__btn {
+      position: relative;
+      border: 1px solid;
+      outline: none;
+      cursor: pointer;
+      color: $color-light;
+      width: 100%;
+      font-size: 18px;
+      font-weight: 400;
+      padding: 15px 0;
+      float: left;
+      background: linear-gradient(to left, $color-red 50%, $color-light 50%);
+      background-size: 200% 100%;
+      background-position: right bottom;
+      transition: all 0.5s ease;
+      &:hover {
+        background-position: left bottom;
+        color: $color-darker;
+      }
+      @media screen and (max-width: 767px) {
+        font-size: 14px;
+        font-weight: 500;
+      }
+      &__loading {
+        height: 0;
+        width: 0;
+        padding: 10px;
+        border: 5px solid #ccc;
+        border-right-color: $color-gray;
+        border-radius: 22px;
+        animation: rotateProccessCheck 1s infinite linear;
+        position: absolute;
+        top: 50%;
+        left: 25%;
+        transform: translateX(50%) translateY(-50%);
+        @keyframes rotateProccessCheck {
+          100% {
+            -webkit-transform: translateX(50%) translateY(-50%) rotate(360deg);
+          }
+        }
+      }
+    }
+  }
+}

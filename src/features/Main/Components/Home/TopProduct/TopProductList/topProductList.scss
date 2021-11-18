@@ -1,0 +1,103 @@
+@import "../../../../../../App.scss";
+.top-product {
+  &__list {
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0 40px;
+    position: relative;
+    @media screen and (max-width: 1023px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 0 30px;
+    }
+    @media screen and (max-width: 767px) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-gap: 0 20px;
+    }
+  }
+  &__control {
+    &__left {
+      position: absolute;
+      left: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      @media screen and (max-width: 767px) {
+        padding: 25px;
+      }
+      @media screen and (max-width: 1023px) {
+        padding: 18px;
+      }
+      padding: 15px;
+      font-size: 16px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      outline: none;
+      border: 1px solid rgba($color-gray, 0.4);
+      color: $color-gray;
+      cursor: pointer;
+      transition: all 0.3s linear;
+      animation-duration: 0.5s;
+      animation-name: toRightpr;
+      &:hover {
+        color: white;
+        background-color: $color-red;
+        border: 0;
+      }
+      @keyframes toRightpr {
+        from {
+          left: 15px;
+          opacity: 0;
+        }
+        to {
+          left: 5px;
+          opacity: 1;
+        }
+      }
+    }
+    &__right {
+      position: absolute;
+      right: 5px;
+      top: 50%;
+      transform: translateY(-50%);
+      padding: 15px;
+      @media screen and (max-width: 767px) {
+        padding: 25px;
+      }
+      @media screen and (max-width: 1023px) {
+        padding: 18px;
+      }
+      font-size: 16px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      outline: none;
+      border: 1px solid rgba($color-gray, 0.4);
+      color: $color-gray;
+      cursor: pointer;
+      transition: all 0.3s linear;
+      animation-duration: 0.5s;
+      animation-name: toLeftpr;
+      &:hover {
+        color: white;
+        background-color: $color-red;
+        border: 0;
+      }
+      @keyframes toLeftpr {
+        from {
+          right: 15px;
+          opacity: 0;
+        }
+        to {
+          right: 5px;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &__banner {
+    cursor: pointer;
+  }
+}
